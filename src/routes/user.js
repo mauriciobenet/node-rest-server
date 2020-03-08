@@ -5,14 +5,16 @@ const express = require('express');
 const app = express();
 const bcrypt = require('bcrypt');
 
-// [[GET ONE]]
+
 app.get('/', (req, res) => {
     res.send('HOME');
 });
 
+// [[GET ONE]]
+
 
 // [[GET A RANGE OF USERS]]
-app.get('/users', verifyToken, (req, res) => {
+app.get('/users', (req, res) => {
 
     // return res.json({
     //     user: req.user,

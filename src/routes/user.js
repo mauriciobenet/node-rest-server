@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 
 
 // [[GET A RANGE OF USERS]]
-app.get('/users', (req, res) => {
+app.get('/users', verifyToken, (req, res) => {
 
     // return res.json({
     //     user: req.user,
@@ -53,7 +53,7 @@ app.get('/users', (req, res) => {
 
 
 // [[ CREATE ]]
-app.post('/user', (req, res) => {
+app.post('/user', [verifyToken, isAdmin], (req, res) => {
     let body = req.body;
 
     let user = new User({

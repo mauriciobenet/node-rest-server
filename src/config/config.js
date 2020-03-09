@@ -33,9 +33,9 @@ process.env.SEED = process.env.SEED || 'app-dev-seed';
 // ============================
 let urlDB;
 
-// if (process.env.NODE_ENV === 'dev') {
-//     urlDB = 'mongodb://localhost:27017/cafe';
-// } else {
+if (process.env.NODE_ENV === 'dev') {
+    urlDB = 'mongodb://localhost:27017/cafe';
+} else {
     urlDB = 'mongodb+srv://super:cafe@cafe-mpjyr.mongodb.net/cafe';
-// }
+}
 process.env.URLDB = urlDB;

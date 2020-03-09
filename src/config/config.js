@@ -36,6 +36,6 @@ let urlDB;
 // if (process.env.NODE_ENV === 'dev') {
 //     urlDB = 'mongodb://localhost:27017/cafe';
 // } else {
-    urlDB = 'mongodb+srv://super:coffee.admin@cafe-mpjyr.mongodb.net/test';
+    urlDB = 'mongodb+srv://super:cafe@cafe-mpjyr.mongodb.net/cafe';
 // }
 process.env.URLDB = urlDB;

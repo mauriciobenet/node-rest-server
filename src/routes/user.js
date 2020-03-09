@@ -53,7 +53,7 @@ app.get('/users', (req, res) => {
 
 
 // [[ CREATE ]]
-app.post('/user', [verifyToken, isAdmin], (req, res) => {
+app.post('/user', (req, res) => {
     let body = req.body;
 
     let user = new User({
